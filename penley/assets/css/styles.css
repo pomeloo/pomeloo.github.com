@@ -1,0 +1,193 @@
+/* 基础设置 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #48C193;
+  color: #333;
+}
+
+/* 居中容器 */
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 第一部分：Logo和名称 */
+#logo-section {
+  background-color: #48C193;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo-section .logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+#logo-section h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* 第二部分：展示游戏 */
+#games-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#games-section header {
+  margin-bottom: 40px;
+}
+
+.games-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center; /* Center the items horizontally */
+}
+
+.game-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  text-align: left; /* Set text alignment to left for better layout */
+  width: 100%;
+  max-width: 350px;
+}
+
+.game-item:hover {
+  transform: translateY(-10px); /* Hover effect for game item */
+}
+
+.game-item .game-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  background-color: #eee;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .game-item img { */
+  /* max-width: 60%; */
+  /* max-height: 60%; */
+  /* object-fit: contain; */
+/* } */
+
+.game-item .game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.game-item .game-info .game-name {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.game-item .game-info .buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto; /* Align buttons to the bottom */
+}
+
+.game-item .game-info .buttons a {
+  background-color: #ff7b00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.game-item .game-info .buttons a:hover {
+  background-color: #e65c00;
+}
+
+/* 第三部分：社交链接 */
+#social-section {
+  background-color: #fff;
+  color: black;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#social-section header h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.social-links a {
+  color: black;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ff7b00;
+}
+
+/* 第四部分：页脚 */
+#footer {
+  background-color: #48C193;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#footer p {
+  font-size: 1em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  #logo-section h1 {
+    font-size: 2em;
+  }
+
+  #games-section header h2,
+  #social-section header h2 {
+    font-size: 2em;
+  }
+
+  .games-list {
+    grid-template-columns: 1fr;
+  }
+}
