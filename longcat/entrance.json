@@ -1,6 +1,7 @@
 {
   "default": {
-    "InternalResourceVersion": 25040801,
+    "InternalResourceVersion": 25041501,
+    "ResourceUpdateUrl": null,
     "GameUpdateUrl": null,
     "Review": false
   }
